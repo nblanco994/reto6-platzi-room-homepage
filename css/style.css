@@ -1,94 +1,132 @@
-
-body, html{
+body, html {
     margin: 0;
     padding: 0;
     font-family: 'Spartan', sans-serif;
-    
 }
 
-.container{
+.container {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
 
-.menu{
-    position: relative;
+.menu {
+    position: absolute;
     color: white;
     padding: 0;
     display: flex;
+    width: 100%;
     justify-content: center;
 }
-.menu img{
+
+.menu img {
     position: static;
+    padding: 50px;
     height: 20px;
 }
-#closeNavmenu{
+
+#img_room {
+    margin-top: 3px;
+}
+
+.menu img:first-child {
+    left: -30px;
+    height: 25px;
     position: absolute;
+}
+
+#closeNavmenu {
     padding: 0px;
     left: 15px;
     height: 15px;
+    position: absolute;
 }
-.navMenu{
+
+.navMenu {
     width: 100%;
     height: 80px;
-    position: absolute;
     display: flex;
     padding: 0px;
+    top: -100px;
     background: white;
     justify-content: flex-end;
     align-items: center;
-    transition: 200ms;
+    transition: 300ms;
+    position: absolute;
 }
-.navMenu img{
+
+.show {
+    top: 0px;
+}
+
+.navMenu img {
     height: 30px;
 }
-.navMenubar{
+
+.navMenubar {
     list-style: none;
     display: flex;
     align-items: center;
 }
-.navMenubar li a{
+
+.navMenubar li a {
+    margin-left: 40px;
+    font-weight: 800;
+    font-size: 12px;
     text-decoration: none;
     color: black;
-    margin-left: 60px;
-    font-weight: 600;
-    font-size: 10px;
 }
 
-.hero{
+.button_shoping:hover {
+    color: hsl(0, 0%, 63%);
+}
+
+.button_shoping:hover path {
+    stroke: hsl(0, 0%, 63%);
+}
+
+.button_shoping:active {
+    color: hsl(0, 0%, 27%);
+}
+
+.hero {
     width: 100%;
 }
-.hero_container{
+
+.hero_container {
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(3, 100%);
     width: 100%;
 }
-.hero_img{
+
+.hero_img {
     display: inline-block;
-    position: relative;
     top: 0;
     left: -0%;
     z-index: -1;
     transition: 500ms;
+    position: relative;
 }
-.hero_img > img{
+
+.hero_img img {
     width: 100%;
 }
-.hero_details{
-    position: relative;
+
+.hero_details {
     padding: 20px;
+    position: relative;
 }
-.arrows-contain{
-    position: absolute;
+
+.arrows-contain {
     display: flex;
-    width: 35%;
     height: 10px;
-    margin-top: -67px;
-    padding-left: 255px;
+    margin-top: -47px;
+    padding-left: 275px;
+    position: absolute;
 }
-.arrows{
+
+.arrows {
     display: flex;
     width: 43px;
     height: 43px;
@@ -96,45 +134,174 @@ body, html{
     align-items: center;
     background: black;
 }
-.arrows > img{
+
+.arrows img {
     width: 10px;
     height: 14px;
 }
-.arrows:active{
+
+.arrows:active {
     background: hsl(0, 0%, 27%);
 }
-.hero_details > h2{
-    font-size: 25px;
-    margin-bottom: 5px;
+
+.hero_details {
+    margin-bottom: 14px;
 }
-.hero_details > p{
-    font-size: 17px;
+
+.hero_details h2 {
+    font-size: 20px;
+    margin-bottom: -5px;
+    margin-top: 0px;
+}
+
+.hero_details p {
+    font-size: 13px;
     color: hsl(0, 0%, 63%);
-    margin-bottom: 33px;
+    margin-bottom: 37px;
 }
-.hero_details > a{
-    font-size: 10px;
-    font-weight: 500;
+
+.hero_details a {
+    font-size: 11px;
+    font-weight: 640;
     letter-spacing: 8px;
     text-decoration: none;
     color: hsl(0, 0%, 27%);
 }
 
-.about_img{
+.about_img {
     width: 100%;
 }
-.about_img > img{
-    width: 100%;
+
+.about_details {
+    padding: 20px;
 }
-.about_details{
-   padding: 20px;
+
+.about_details h3 {
+    font-size: 16px;
+    margin-bottom: -5px;
 }
-.about_details > h3{
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.about_details > p{
-    font-size: 17px;
+
+.about_details p {
+    font-size: 14px;
     color: hsl(0, 0%, 63%);
     margin-bottom: 33px;
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        background-size: auto;
+    }
+    .container {
+        margin-top: 0px;
+    }
+    .menu img {
+        margin-right: 0px;
+        height: 18px;
+    }
+    .menu img:first-child {
+        display: none;
+    }
+    .navMenu {
+        padding: 0;
+        background: none;
+        height: inherit;
+        position: static;
+        justify-content: flex-start;
+    }
+    .navMenubar {
+        margin-left: -45px;
+    }
+    .navMenubar li a {
+        color: white;
+        font-size: 12px;
+        font-weight: 540;
+        margin-left: 49px;
+    }
+    .navMenubar li a:hover {
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: 56% 45%;
+    }
+    .hero_container {
+        height: 100%;
+    }
+    .hero_img img {
+        width: 100%;
+        height: 100%;
+    }
+    .arrows-contain {
+        width: 8.5%;
+        height: 8%;
+        padding: 20px;
+        left: 685px;
+        margin-top: 377px;
+    }
+    .arrows {
+        width: 100%;
+        height: 100%;
+    }
+    .arrows:hover {
+        background: hsl(0, 0%, 27%);
+    }
+    .hero_details {
+        padding: 90px 40px 90px 90px;
+        text-align: left;
+        position: static;
+    }
+    .hero_details h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 30px;
+    }
+    .hero_details p {
+        font-size: 12px;
+        padding-right: 60px;
+        margin-bottom: 4%;
+    }
+    .hero_details a {
+        font-size: 10px;
+        color: rgba(0, 0, 0, 0.938);
+    }
+    .button_shoping:hover {
+        color: hsl(0, 0%, 63%);
+    }
+    .button_shoping:hover path {
+        stroke: hsl(0, 0%, 63%);
+    }
+    .button_shoping:active {
+        color: hsl(0, 0%, 27%);
+    }
+    .about {
+        display: flex;
+        margin: -4px;
+    }
+    .about:first-child {
+        width: 29.19%;
+    }
+    .about_details {
+        width: 38%;
+        padding: 4% 4% 0% 4%;
+    }
+    .about_img {
+        width: 40%;
+    }
+    .about_img #img1 {
+        width: 100%;
+    }
+    .about_img #img2 {
+        width: 105%;
+    }
+    .about_details>h3 {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+    }
+    .about_details>p {
+        font-size: 14px;
+        color: hsl(0, 0%, 63%);
+    }
 }
