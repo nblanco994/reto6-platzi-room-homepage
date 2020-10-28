@@ -9,7 +9,6 @@ closeNavmenu.onclick = () => {
     navMenubar.classList.toggle('show');
     container[0].style.background = 'transparent';
 }
-
 const angleLeft = document.getElementById('angle_left');
 const angleRight = document.getElementById('angle_right');
 const imageHero = document.getElementsByClassName('hero_img');
