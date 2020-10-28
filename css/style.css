@@ -187,7 +187,7 @@ body, html {
     margin-bottom: 25px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
     body {
         background-size: auto;
     }
@@ -253,7 +253,7 @@ body, html {
     }
     .arrows-contain {
         width: 8.5%;
-        height: 8.2%;
+        height: 8%; 
         padding: 20px;
         left: 685px;
         margin-top: 377px;
@@ -281,7 +281,7 @@ body, html {
         margin-bottom: 4%;
     }
     .hero_details a {
-        font-size: 9px;
+        font-size: 10px;
         color: rgba(0, 0, 0, 0.938);
     }
     .button_shoping:hover {

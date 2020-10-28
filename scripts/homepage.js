@@ -1,22 +1,26 @@
 const closeNavmenu = document.getElementById('closeNavmenu');
 const navMenubar = document.getElementById('navMenubar');
 const slashButton = document.getElementById('slashButton');
-slashButton.onclick = () => navMenubar.classList.toggle('show');
-closeNavmenu.onclick = () => navMenubar.classList.toggle('show');
+slashButton.onclick = () => {
+    navMenubar.classList.toggle('show');
+    container[0].style.background = 'rgba(0, 0, 0, 0.25)';
+}
+closeNavmenu.onclick = () => {
+    navMenubar.classList.toggle('show');
+    container[0].style.background = 'transparent';
+}
 
 const angleLeft = document.getElementById('angle_left');
 const angleRight = document.getElementById('angle_right');
 const imageHero = document.getElementsByClassName('hero_img');
 const heroName = document.getElementById('hero_name');
 const heroInf = document.getElementById('hero_inf');
-
-
+const container = document.getElementsByClassName('container');
 const imageHero1 = document.getElementById('hero_img1');
 const imageHero2 = document.getElementById('hero_img2');
 const imageHero3 = document.getElementById('hero_img3');
 
 // Arreglo de datos
-
 const arrayContent = [
     {
         imageHero: '-0%',
@@ -64,7 +68,6 @@ function slider(contador) {
         sliderPosition = arrayContent.length - 1;
     }
     //Actualizo en cada posicion
-
     imageHero1.style.left = arrayContent[sliderPosition].imageHero;
     imageHero2.style.left = arrayContent[sliderPosition].imageHero;
     imageHero3.style.left = arrayContent[sliderPosition].imageHero;
